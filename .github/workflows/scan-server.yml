@@ -1,6 +1,9 @@
-name: Scan Server
+name: Scan Server Package
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     types: [opened, synchronize, reopened]
 

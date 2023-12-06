@@ -8,6 +8,7 @@ app.use((_req, res, next) => {
   // Allow any website to connect
   res.setHeader("Access-Control-Allow-Origin", "*");
   // TODO - change this
+  // TODO - fix issues
   // Continue to next middleware
   next();
 });

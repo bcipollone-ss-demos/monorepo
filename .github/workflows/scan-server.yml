@@ -17,6 +17,6 @@ jobs:
     permissions: read-all
     with:
       args: >
-        -Dsonar.projectBaseDir=${{ on.push.paths }}
+        -Dsonar.projectBaseDir=packages/simple-express-server
         -Dsonar.projectKey=monorepo-server
     secrets: inherit

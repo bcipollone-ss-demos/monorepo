@@ -6,6 +6,9 @@ on:
       scanner-opts:
         required: false
         type: string
+      args:
+        required: false
+        type: string
     secrets: 
       SONAR_HOST_URL:
         required: true

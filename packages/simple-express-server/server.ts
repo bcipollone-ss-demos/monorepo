@@ -7,7 +7,7 @@ import { QueryPayload } from '@my-namespace/simple-shared-data';
 app.use((_req, res, next) => {
   // Allow any website to connect
   res.setHeader("Access-Control-Allow-Origin", "*");
-
+  // TODO - remove this
   // Continue to next middleware
   next();
 });

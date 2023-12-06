@@ -5,11 +5,11 @@ on:
     branches:
       - master
     paths:
-      - packages/simple-express-server
+      - packages/simple-express-server/**
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - packages/simple-express-server
+      - packages/simple-express-server/**
 
 jobs:
   scan-server:

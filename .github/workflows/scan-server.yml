@@ -10,6 +10,7 @@ on:
 jobs:
   scan-server:
     uses: ./.github/workflows/sonarqube.yml
+    permissions: read-all
     with:
       scanner-opts: -Dsonar.projectKey=monorepo-server
     secrets: inherit

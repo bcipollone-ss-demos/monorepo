@@ -4,15 +4,19 @@ on:
   push:
     branches:
       - master
+    paths:
+      - packages/simple-express-server
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - packages/simple-express-server
 
 jobs:
   scan-server:
     uses: ./.github/workflows/sonarqube.yml
     permissions: read-all
     with:
-      scanner-opts: -Dsonar.projectKey=monorepo-server
       args: >
-        -Dsonar.projectBaseDir=packages/simple-express-server
+        -Dsonar.projectBaseDir=${{ on.push.paths }}
+        -Dsonar.projectKey=monorepo-server
     secrets: inherit

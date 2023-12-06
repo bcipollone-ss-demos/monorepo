@@ -1,0 +1,12 @@
+name: Scan Server
+
+  on:
+    pull_request:
+      types: [opened, synchronize, reopened]
+
+jobs:
+  scan-server:
+    uses: ./.github/workflows/sonarqube.yml
+    with:
+      scanner-opts: -Dsonar.projectKey=monorepo-server
+    secrets: inherit

@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/sonarqube.yml
     permissions: read-all
     with:
+      scanner-opts: -Dsonar.projectKey=monorepo-server
       args: >
-        -Dsonar.projectKey=monorepo-server
         -Dsonar.projectBaseDir=packages/simple-express-server
     secrets: inherit
